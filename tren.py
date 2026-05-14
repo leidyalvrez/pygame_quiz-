@@ -1,4 +1,4 @@
-# Crear una ciudad de hierro o parque de atraaciones usando los elementos graficos vistos con pygame (lineas, rectangulos, cuadrados, poligonos, circulos, elipses, arcos y textos) en donde los personajes son pacmans.
+# Crear una ciudad de hierro o parque de atracciones usando los elementos graficos vistos con pygame
 
 import pygame 
 import sys
@@ -21,9 +21,10 @@ gris_claro = (200,200,200)
 
 ventana = pygame.display.set_mode((1000,400))
 
-
-
 pygame.init()
+
+# Variables para animación del humo
+humo_y = 140
 
 while True:
 
@@ -33,9 +34,6 @@ while True:
             sys.exit()
 
     ventana.fill(azul)
-
-
-
 
     
     pygame.draw.ellipse(ventana, gris, (400,200,300,150), 0)
@@ -67,9 +65,16 @@ while True:
     pygame.draw.circle(ventana, negro, (690,145), 5, 0)
     pygame.draw.circle(ventana, negro, (730,145), 5, 0)
 
+    # Humo animado saliendo de la chimenea
+    pygame.draw.circle(ventana, gris_claro, (545, humo_y), 12, 0)
+    pygame.draw.circle(ventana, gris_claro, (560, humo_y - 20), 15, 0)
+    pygame.draw.circle(ventana, gris_claro, (535, humo_y - 35), 10, 0)
 
+    # Movimiento del humo
+    humo_y -= 1
 
-
+    if humo_y < 50:
+        humo_y = 140
 
     # Autoria
     fuente_arial = pygame.font.SysFont("Arial", 30, (200,220))
