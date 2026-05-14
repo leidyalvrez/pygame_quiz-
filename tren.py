@@ -21,7 +21,7 @@ gris_claro = (200,200,200)
 
 ventana = pygame.display.set_mode((1000,400))
 
-pygame.display.set_caption("Bambiland")
+
 
 pygame.init()
 
@@ -54,6 +54,18 @@ while True:
     pygame.draw.polygon(ventana, gris_estandar, punto_8, 0)
     punto_9 = [(530,150), (530,195), (565,195), (565,150)]
     pygame.draw.polygon(ventana, gris_estandar, punto_9, 0)
+    puntos_10 = [(510,120), (510,150), (580,150), (580,120)]
+    pygame.draw.polygon(ventana, gris_estandar, puntos_10, 0)
+    puntos_11 = [(600,100), (600,195), (820,195), (820,100)]
+    pygame.draw.polygon(ventana, gris_estandar, puntos_11, 0)
+    puntos_12 = [(630,115), (630,175), (790,175), (790,115)]
+    pygame.draw.polygon(ventana, gris_claro, puntos_12, 0)
+    pygame.draw.circle(ventana, amarillo, (710,150), 40, 0)
+    pygame.draw.circle(ventana, rojo, (710,170), 10, 0)
+    pygame.draw.circle(ventana, blanco, (690,145), 10, 0)
+    pygame.draw.circle(ventana, blanco, (730,145), 10, 0)
+    pygame.draw.circle(ventana, negro, (690,145), 5, 0)
+    pygame.draw.circle(ventana, negro, (730,145), 5, 0)
 
 
 
